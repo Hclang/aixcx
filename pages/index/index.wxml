@@ -1,13 +1,26 @@
 <!--index.wxml-->
 <view class="container">
   <view class='frame_view'>
-    <view class='frame_row'>
-      <view class='frame_item'></view>
-      <view class='frame_item'></view>
+    <view class='frame_row' >
+      <view class='frame_item_top' bindtap="smart">
+        智能助手
+      </view>
     </view>
     <view class='frame_row'>
-      <view class='frame_item'></view>
-      <view class='frame_item'></view>
+      <view class='frame_item' bindtap="science">
+        百科全集
+      </view>
+      <view class='frame_item' bindtap="business">
+        商业分析
+      </view>
+    </view>
+    <view class='frame_row'>
+      <view class='frame_item' bindtap="think">
+        头脑风暴
+      </view>
+      <view class='frame_item' bindtap="article">
+        每日短文
+      </view>
     </view>
 
   </view>
