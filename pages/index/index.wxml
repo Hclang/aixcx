@@ -4,10 +4,8 @@
     <view class='frame_row'>
       <view class='frame_item'></view>
       <view class='frame_item'></view>
-      <view class='frame_item'></view>
     </view>
     <view class='frame_row'>
-      <view class='frame_item'></view>
       <view class='frame_item'></view>
       <view class='frame_item'></view>
     </view>

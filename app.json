@@ -21,19 +21,19 @@
         "selectedIconPath": "images/首页.png",
         "iconPath": "images/首页-置灰.png",
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "学习中心"
       },
       {
         "selectedIconPath": "images/消息.png",
         "iconPath": "images/消息-置灰.png",
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "历史记录"
       },
       {
         "selectedIconPath": "images/个人中心.png",
         "iconPath": "images/个人中心-置灰.png",
         "pagePath": "pages/personal/personal",
-        "text": "我的"
+        "text": "个人中心"
       }
     ]
   }
