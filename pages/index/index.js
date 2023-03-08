@@ -9,7 +9,7 @@ Page({
   // 事件处理函数
   smart() {
     wx.navigateTo({
-      url: '../smart/smart'
+      url: '../chat/chat'
     })
   },
 

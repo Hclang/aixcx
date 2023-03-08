@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/personal/personal",
-    "pages/smart/smart"
+    "pages/smart/smart",
+    "pages/chat/chat"
   ],
   "window":{
     "backgroundTextStyle":"light",

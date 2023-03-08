@@ -23,7 +23,7 @@
 } 
 
 .frame_item{
-  width:250rpx;
+  width:280rpx;
   height:250rpx;
   background-color: cornsilk;
   display: flex;

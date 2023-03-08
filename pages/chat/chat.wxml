@@ -1,0 +1,49 @@
+<import src="../../modules/chat-input/chat-input.wxml" />
+<view class="chat" style="height: {{height}}px">
+    <scroll-view scroll-y='true'  class="chat-content" style="height: {{chatHeight}}px">
+      <view >
+        <!-- 默认展示 -->
+        <view class="chat-content-list-time">{{normalDataTime}}</view>
+        <view class="chat-content-list " >
+          <image class="chat-content-list-avatar "  src="../../image/chat/voice/speak.png"></image>
+          <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
+              <view class="chat-content-list-msg"> 
+                  <text selectable='true'>有什么问题快向我提问吧！</text>
+              </view>
+          </view>
+        </view>
+      </view>
+      <view >
+        <!-- 默认展示  -->
+        <view class="chat-content-list-time">{{normalDataTime}}</view>
+        <view class="chat-content-list right" >
+          <image class="chat-content-list-avatar "  src="../../image/chat/voice/speak.png"></image>
+          <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
+            <view class="chat-content-list-msg"> 
+                  <text selectable='true'>两个牙刷在洗手间里聊天，一只说：“今天真是累啊，刷了一整天的牙！”另一只回答：“别抱怨了，你应该庆幸自己不是马桶刷。</text>
+                  <view class='over-read-tip '></view>
+              </view>
+          </view>
+        </view>
+      </view>
+      <view wx:for="{{wxchatLists}}" wx:key="{{index}}">
+        <!-- ↑ wx:for="{{wxchatLists}}" wx:key="{{index}}" -->
+        <view class="chat-content-list-time">{{item.dataTime}}</view>
+        <view class="chat-content-list right" >
+          <image class="chat-content-list-avatar "  src="{{item.userImgSrc}}"></image>
+          <view class="chat-content-list-content " bindlongtap="delMsg" data-index="{{index}}">
+              <!--  文字信息模板  ↓ hidden="{{!(item.msg_type === 'text')}}" -->
+              <view class="chat-content-list-msg"  hidden="{{!(item.msg_type === 'text')}}"> 
+                  <text selectable='true'>{{item.textMessage}}</text>
+              <view class='over-read-tip '></view>
+              </view>
+          </view>
+        </view>
+      </view>
+      
+    </scroll-view>
+    
+    
+    <template is="chat-input" data="{{inputObj:inputObj,textMessage:textMessage,showVoicePart:true}}" />
+</view>
+
