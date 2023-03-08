@@ -1,7 +1,11 @@
 // chat.js
 // let toast = require('../../utils/toast.js');
+const httpUtils = require('../../utils/http')
+const ui = require('../../utils/ui')
+
 let chatInput = require('../../modules/chat-input/chat-input');
 var utils = require("../../utils/util.js")
+
 Page({
 
   /**
@@ -85,19 +89,39 @@ Page({
           textMessage: content,
           dataTime: utils.formatTime(new Date()),
           msg_type: 'text',
-          type: 1,
-          answer:'',
-          elapsed:''
+          type: 'right'
         };
         
         list.push(temp);
 
         
+        let obj = {
+          method: "GET",
+          showLoading: true,
+          url:'sendMsg',
+          message:"正在请求...",
+          data: {content = "你好"}
+        }
+        httpUtils.request(obj).then(res=>{
+          console.log(res)
+          ui.showToast(res.data.errorMsg)
+        }).catch(err=>{
+          console.log('ERROR')
+        });
 
-        temp.answer = 'asdf'
-        temp.elapsed = '123'
-     
-        list.push(temp);
+        var temp_left= {
+          userImgSrc: '../../image/chat/extra/3.png',
+          textMessage: content,
+          dataTime: utils.formatTime(new Date()),
+          msg_type: 'text',
+          type: 'left'
+        };
+        temp_left.answer = 'asdf'
+        temp_left.elapsed = '123'
+        var list_left = that.data.wxchatLists;
+        list_left.push(temp_left);
+
+
         that.setData({
           wxchatLists: list,
         })
@@ -105,6 +129,7 @@ Page({
   },
   resetInputStatus: function () {
       chatInput.closeExtraView();
+      
   },
  
   //删除单条消息

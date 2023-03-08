@@ -28,6 +28,8 @@
       </view>
       <view wx:for="{{wxchatLists}}" wx:key="{{index}}">
         <!-- ↑ wx:for="{{wxchatLists}}" wx:key="{{index}}" -->
+
+        <view wx:if="{{item.type == 'right'}}">
         <view class="chat-content-list-time">{{item.dataTime}}</view>
         <view class="chat-content-list right" >
           <image class="chat-content-list-avatar "  src="{{item.userImgSrc}}"></image>
@@ -39,7 +41,9 @@
               </view>
           </view>
         </view>
+      </view>
 
+      <view wx:if="{{item.type == 'left'}}">
         <view class="chat-content-list-time">{{normalDataTime}}</view>
         <view class="chat-content-list " >
           <image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>
@@ -49,7 +53,7 @@
               </view>
           </view>
         </view>
-
+      </view>
       </view>
     </scroll-view>
     
