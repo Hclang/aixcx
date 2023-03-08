@@ -1,5 +1,5 @@
 const ui = require('./ui');
-const BASE_URL = 'https://www.hclang.cn'
+const BASE_URL = 'https://atoptest.aciga.com.cn'
 
 /**
  * 网络请求request

@@ -93,34 +93,36 @@ Page({
         };
         
         list.push(temp);
-
         
         let obj = {
           method: "GET",
           showLoading: true,
-          url:'sendMsg',
-          message:"正在请求...",
-          data: {content = "你好"}
+          url:'/infrared/base/v1/types',
+          message:"正在请求..."
         }
         httpUtils.request(obj).then(res=>{
           console.log(res)
-          ui.showToast(res.data.errorMsg)
+          ui.showToast(res.data.code)
+
+          var temp_left= {
+            userImgSrc: '../../image/chat/extra/3.png',
+            textMessage: content,
+            dataTime: utils.formatTime(new Date()),
+            msg_type: 'text',
+            type: 'left'
+          };
+          temp_left.answer = JSON.stringify(res.data.data)
+          temp_left.elapsed = '12'
+          var list_left = that.data.wxchatLists;
+          list_left.push(temp_left);
+
+          that.setData({
+            wxchatLists: list_left,
+          })
+
         }).catch(err=>{
-          console.log('ERROR')
+          console.log(err)
         });
-
-        var temp_left= {
-          userImgSrc: '../../image/chat/extra/3.png',
-          textMessage: content,
-          dataTime: utils.formatTime(new Date()),
-          msg_type: 'text',
-          type: 'left'
-        };
-        temp_left.answer = 'asdf'
-        temp_left.elapsed = '123'
-        var list_left = that.data.wxchatLists;
-        list_left.push(temp_left);
-
 
         that.setData({
           wxchatLists: list,
