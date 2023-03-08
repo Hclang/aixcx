@@ -1,4 +1,3 @@
-@import "voice.wxss";
 @import "extra.wxss";
 input{
     padding-top: 10rpx;
@@ -56,7 +55,6 @@ input{
     text-align: center;
     margin: 0 10rpx;
     border-radius: 10rpx;
-    display: none;
 }
 .btn-voice-press{
     border:1rpx solid #1e1e1e;

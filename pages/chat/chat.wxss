@@ -30,7 +30,6 @@ scroll-view{
 .chat-content-list.right > .chat-content-list-avatar{
     margin-right: 0;
     margin-left: 30rpx;
-    display: none;
 }
 .chat-content-list.right > .chat-content-list-content > .chat-content-list-name{
     margin-right: 16rpx;

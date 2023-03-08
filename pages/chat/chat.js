@@ -70,11 +70,9 @@ Page({
         normalDataTime: utils.formatTime(new Date()),
       });
       wx.setNavigationBarTitle({
-          title: '与XX聊天中'
+          title: '智能助手'
       });
       that.textButton();
-      that.extraButton();
-      that.voiceButton();
   },
   textButton: function () {
     var that = this;
@@ -83,117 +81,32 @@ Page({
         console.log(content);
         var list = that.data.wxchatLists;
         var temp = {
-          userImgSrc: '../../image/chat/extra/close_chat.png',
+          userImgSrc: '../../image/chat/extra/3.png',
           textMessage: content,
           dataTime: utils.formatTime(new Date()),
           msg_type: 'text',
-          type: 1
+          type: 1,
+          answer:'',
+          elapsed:''
         };
+        
+        list.push(temp);
+
+        
+
+        temp.answer = 'asdf'
+        temp.elapsed = '123'
+     
         list.push(temp);
         that.setData({
           wxchatLists: list,
         })
       });
-    
   },
-  voiceButton: function () {
-    var that = this;
-    chatInput.recordVoiceListener(function (res, duration) {
-      let tempFilePath = res.tempFilePath;
-      let vDuration = duration;
-      console.log(tempFilePath);
-      console.log(vDuration+"这是voice的时长");
-
-      var list = that.data.wxchatLists;
-      var temp = {
-        userImgSrc: '../../image/chat/extra/close_chat.png',
-        voiceSrc: tempFilePath,
-        voiceTime: vDuration,
-        dataTime: utils.formatTime(new Date()),
-        msg_type: 'voice',
-        type: 1
-      };
-      list.push(temp);
-      that.setData({
-        wxchatLists: list,
-      })
-    });
-    chatInput.setVoiceRecordStatusListener(function (status) {
-        switch (status) {
-            case chatInput.VRStatus.START://开始录音
-
-                break;
-            case chatInput.VRStatus.SUCCESS://录音成功
-
-                break;
-            case chatInput.VRStatus.CANCEL://取消录音
-
-                break;
-            case chatInput.VRStatus.SHORT://录音时长太短
-
-                break;
-            case chatInput.VRStatus.UNAUTH://未授权录音功能
-
-                break;
-            case chatInput.VRStatus.FAIL://录音失败(已经授权了)
-
-                break;
-        }
-    })
-  },
-  extraButton: function () {
-      let that = this;
-      chatInput.clickExtraListener(function (e) {
-          console.log(e);
-          let itemIndex = parseInt(e.currentTarget.dataset.index);
-          if (itemIndex === 2) {
-              that.myFun();
-              return;
-          }
-          wx.chooseImage({
-              count: 1, // 默认9
-              sizeType: ['compressed'],
-              sourceType: itemIndex === 0 ? ['album'] : ['camera'],
-              success: function (res) {
-                let tempFilePath = res.tempFilePaths[0];
-                console.log(tempFilePath);
-                
-                var list = that.data.wxchatLists;
-                var temp = {
-                  dataTime: utils.formatTime(new Date()),
-                  userImgSrc: '../../image/chat/extra/close_chat.png',
-                  sendImgSrc:tempFilePath,
-                  msg_type: 'img',
-                  type: 1
-                };
-                list.push(temp);
-                that.setData({
-                  wxchatLists: list,
-                })
-                
-
-              }
-          });
-        
-      });
-      chatInput.setExtraButtonClickListener(function (dismiss) {
-          console.log('Extra弹窗是否消息', dismiss);
-      })
-  },
-
-
   resetInputStatus: function () {
       chatInput.closeExtraView();
   },
-  //播放录音
-  playRecord: function (e) {
-    let _this = this;
-    // wx.playVoice({
-    //   filePath: voiceSrc // src可以是录音文件临时路径
-    // })
-    console.log(e)
-    console.log(_this)
-  },
+ 
   //删除单条消息
   delMsg: function (e) {
     var that = this;
@@ -219,19 +132,6 @@ Page({
           console.log('用户点击取消')
         }
       }
-    })
-    
-
-    
-  },
-  //点击图片 预览大图
-  seeBigImg: function (e) {
-    var that = this;
-    var idx  = parseInt(e.currentTarget.dataset.index);
-    var src = that.data.wxchatLists[idx].sendImgSrc;
-    wx.previewImage({
-      current: src, // 当前显示图片的http链接
-      urls: [src] // 需要预览的图片http链接列表
     })
   },
 });
