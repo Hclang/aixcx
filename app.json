@@ -1,40 +1,42 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/personal/personal",
     "pages/smart/smart",
-    "pages/chat/chat"
+    "pages/chat/chat",
+    "pages/vip/vip",
+    "pages/nick-input/nick-input"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3A5FCD",
     "navigationBarTitleText": "AI百事百科",
-    "navigationBarTextStyle":"white",
+    "navigationBarTextStyle": "white",
     "borderStyle": "blue"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#a9b7b7",
-    "selectedColor": "#11cd6e",
+    "selectedColor": "#3A5FCD",
     "borderStyle": "black",
     "list": [
       {
-        "selectedIconPath": "images/首页.png",
-        "iconPath": "images/首页-置灰.png",
+        "selectedIconPath": "images/home_fill.png",
+        "iconPath": "images/home-2.png",
         "pagePath": "pages/index/index",
         "text": "学习中心"
       },
       {
-        "selectedIconPath": "images/消息.png",
-        "iconPath": "images/消息-置灰.png",
+        "selectedIconPath": "images/comment_fill.png",
+        "iconPath": "images/comment-2.png",
         "pagePath": "pages/logs/logs",
         "text": "历史记录"
       },
       {
-        "selectedIconPath": "images/个人中心.png",
-        "iconPath": "images/个人中心-置灰.png",
+        "selectedIconPath": "images/people_fill.png",
+        "iconPath": "images/people-2.png",
         "pagePath": "pages/personal/personal",
         "text": "个人中心"
       }

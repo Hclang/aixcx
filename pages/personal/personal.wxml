@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="personal">
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
       <view class="userinfo-avatar" bindtap="bindViewTap">
@@ -17,7 +17,15 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="lists" wx:for="{{lists}}">
+    <view class="list-item" bindtap='{{item.page}}' hover-class="hover">
+      <image class='type-icon' mode='widthFix' src='{{item.image}}'></image>
+        <text class='text'>{{item.name}}</text>
+        <image class='next' mode='widthFix' src='../../images/icons/right.png'></image>
+    </view>
+  </view>
+
+  <view class="bottom">
+      <view>注册协议</view><view>|</view><view>隐私政策</view>
   </view>
 </view>
