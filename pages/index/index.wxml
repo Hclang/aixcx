@@ -1,25 +1,54 @@
 <!--index.wxml-->
-<view class="container">
+<view class="home">
   <view class='frame_view'>
     <view class='frame_row' >
-      <view class='frame_item_top' bindtap="smart">
-        智能助手
+      
+      <view class='frame_item_top item-color1' bindtap="smart">
+        <view class="frame_item_image">
+          <image src="../../images/smart.png"/>
+          <view class="frame_item_title">
+            <text>智能助手</text>
+          </view>
+        </view>
+        <view class="frame_item_detail">
+          <text>这是一个智能助手的介绍，向你提供完美的AI问答式助手，完美解决你生活中所有问题。</text>
+        </view>
       </view>
     </view>
     <view class='frame_row'>
-      <view class='frame_item' bindtap="science">
-        百科全集
+      <view class='frame_item item-color2' bindtap="science">
+        <view class="frame_item_image">
+          <image src="../../images/science.png"/>
+          <view class="frame_item_title">
+            <text>百科全集</text>
+          </view>
+        </view>
       </view>
-      <view class='frame_item' bindtap="business">
-        商业分析
+      <view class='frame_item item-color3' bindtap="business">
+        <view class="frame_item_image">
+          <image src="../../images/business.png"/>
+          <view class="frame_item_title">
+            <text>商业分析</text>
+          </view>
+        </view>
       </view>
     </view>
     <view class='frame_row'>
-      <view class='frame_item' bindtap="think">
-        头脑风暴
+      <view class='frame_item item-color4' bindtap="think">
+        <view class="frame_item_image">
+          <image src="../../images/think.png"/>
+          <view class="frame_item_title">
+            <text>头脑风暴</text>
+          </view>
+        </view>
       </view>
-      <view class='frame_item' bindtap="article">
-        每日短文
+      <view class='frame_item item-color5' bindtap="article">
+        <view class="frame_item_image">
+          <image src="../../images/article.png"/>
+          <view class="frame_item_title">
+            <text>每日短文</text>
+          </view>
+        </view>
       </view>
     </view>
 

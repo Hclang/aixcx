@@ -8,16 +8,17 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#3A5FCD",
+    "navigationBarTitleText": "AI百事百科",
+    "navigationBarTextStyle":"white",
+    "borderStyle": "blue"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
-    "borderStyle": "white",
+    "borderStyle": "black",
     "list": [
       {
         "selectedIconPath": "images/首页.png",
