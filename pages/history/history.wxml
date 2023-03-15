@@ -1,0 +1,22 @@
+<!--pages/history/history.wxml-->
+<view class="history_container">
+    <scroll-view scroll-y > 
+      <view wx:for="{{dataList}}" data-info='{{item}}' bindtap="toDetails">
+        <view class="item">
+            <view class="title">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="time">
+                <text>{{item.createTime}}</text>
+            </view>
+            <view class="content">
+              <text>{{item.content}}</text>
+            </view>
+            <view class="goodsContent">
+              <text>{{item.goodsNum}}人觉得很赞</text>
+              <image mode='widthFix' src="../../images/icons/appreciate_fill.png"/>
+            </view>
+        </view>
+      </view>
+    </scroll-view>
+</view>

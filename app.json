@@ -6,7 +6,8 @@
     "pages/smart/smart",
     "pages/chat/chat",
     "pages/vip/vip",
-    "pages/nick-input/nick-input"
+    "pages/nick-input/nick-input",
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,7 +32,7 @@
       {
         "selectedIconPath": "images/comment_fill.png",
         "iconPath": "images/comment-2.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/history/history",
         "text": "历史记录"
       },
       {

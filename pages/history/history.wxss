@@ -1,0 +1,47 @@
+/* pages/history/history.wxss */
+.history_container{
+  background-color: #eeeeee;
+  height: 100%;
+}
+.item{
+  margin:20rpx 20rpx;
+  padding:30rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  
+}
+
+.item .title{
+  color:blue;
+}
+
+.item .time{
+  font-size: small;
+  color:#999;
+}
+
+.item .content{
+  max-height: 200rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+  width: 100%;
+  display: -webkit-box;
+  word-wrap: break-word;
+}
+.item .goodsContent{
+  font-size: small;
+  color:#999;
+  padding-top:20rpx;
+  display: flex;
+  position:relative;
+}
+
+.goodsContent image{
+  width: 40rpx;
+  position:absolute;
+  right:0rpx;
+}
