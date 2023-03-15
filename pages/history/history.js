@@ -29,6 +29,12 @@ Page({
         content:"1.家长对学前教育的需求：对幼儿教育的基本了解，早期教育的优势、育儿知识的学习、学前教育制度了解等。2.社会对学前教育的需求：社会对幼儿才艺、社交的充分学习",
         goodsNum:123,
         clickGoods:true
+      },{
+        title:"直径为21厘米的圆 自身周长是多少 内接正五边形的周长是多少 内接正三角形的周长又是多少 请直接给出答案",
+        createTime:"2023年03月15日",
+        content:"1.家长对学前教育的需求：对幼儿教育的基本了解，早期教育的优势、育儿知识的学习、学前教育制度了解等。2.社会对学前教育的需求：社会对幼儿才艺、社交的充分学习",
+        goodsNum:123,
+        clickGoods:true
       }]
   },
 
@@ -88,5 +94,10 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  toDetails() {
+      wx.navigateTo({
+        url: '/pages/history-details/history-details',
+      })
   }
 })

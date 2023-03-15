@@ -1,6 +1,8 @@
 /* pages/history/history.wxss */
+page {
+  background-color: #eee;
+}
 .history_container{
-  background-color: #eeeeee;
   height: 100%;
 }
 .item{
@@ -24,8 +26,8 @@
   max-height: 200rpx;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  -webkit-line-clamp: 3;
+  /* white-space: nowrap;  #强制不换行*/
+  -webkit-line-clamp: 4;
   -webkit-box-orient:vertical;
   word-break:break-all;
   width: 100%;

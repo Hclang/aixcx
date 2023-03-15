@@ -7,7 +7,8 @@
     "pages/chat/chat",
     "pages/vip/vip",
     "pages/nick-input/nick-input",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/history-details/history-details"
   ],
   "window": {
     "backgroundTextStyle": "light",
