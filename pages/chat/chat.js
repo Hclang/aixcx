@@ -97,8 +97,11 @@ Page({
         let obj = {
           method: "GET",
           showLoading: true,
-          url:'/infrared/base/v1/types',
-          message:"正在请求..."
+          url:'/ai/sendMsg',
+          message:"AI思考中...",
+          data:{
+            "content":content
+          }
         }
         httpUtils.request(obj).then(res=>{
           console.log(res)
@@ -106,13 +109,12 @@ Page({
 
           var temp_left= {
             userImgSrc: '../../image/chat/extra/3.png',
-            textMessage: content,
             dataTime: utils.formatTime(new Date()),
             msg_type: 'text',
             type: 'left'
           };
-          temp_left.answer = JSON.stringify(res.data.data)
-          temp_left.elapsed = '12'
+          temp_left.answer = res.data.data.answer
+          temp_left.elapsed = res.data.data.elapsed
           var list_left = that.data.wxchatLists;
           list_left.push(temp_left);
 

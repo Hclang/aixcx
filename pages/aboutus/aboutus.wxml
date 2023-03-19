@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="header">
+    <text class="company-name">联系我们</text>
+  </view>
+
+  <view class="introduction">
+    <text class="section-title">WX：Hclang\n WX：Janvy-liu</text>      
+  </view>
+</view>

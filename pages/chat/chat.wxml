@@ -8,24 +8,27 @@
           <image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
               <view class="chat-content-list-msg"> 
-                  <text selectable='true'>有什么问题快向我提问吧！</text>
+                  <text selectable='true'>有什么问题快向我提问吧！我是ChatGPT智能AI助手！</text>
               </view>
           </view>
         </view>
       </view>
-      <view >
-        <!-- 默认展示  -->
+
+       <!-- 默认展示  -->
+        <!-- <view >
         <view class="chat-content-list-time">{{normalDataTime}}</view>
         <view class="chat-content-list right" >
           <image class="chat-content-list-avatar "  src="../../image/chat/extra/3.png"></image>
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
             <view class="chat-content-list-msg"> 
-                  <text selectable='true'>DEMO</text>
+                  <text selectable="{{ true }}" space="preserve">基于ChatGPT提供智能AI回复能力</text>
                   <view class='over-read-tip '></view>
               </view>
           </view>
         </view>
-      </view>
+      </view> -->
+
+      
       <view wx:for="{{wxchatLists}}" wx:key="{{index}}">
         <!-- ↑ wx:for="{{wxchatLists}}" wx:key="{{index}}" -->
 
@@ -36,7 +39,7 @@
           <view class="chat-content-list-content " bindlongtap="delMsg" data-index="{{index}}">
               <!--  文字信息模板  ↓ hidden="{{!(item.msg_type === 'text')}}" -->
               <view class="chat-content-list-msg"  hidden="{{!(item.msg_type === 'text')}}"> 
-                  <text selectable='true'>{{item.textMessage}}</text>
+                  <text selectable="{{ true }}" space="preserve">{{item.textMessage}}</text>
               <view class='over-read-tip '></view>
               </view>
           </view>
@@ -49,7 +52,8 @@
           <image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
               <view class="chat-content-list-msg"> 
-                  <text selectable='true'>{{item.answer}}</text>
+                  <text selectable='true' space="preserve">{{item.answer}}</text>
+                  <text selectable='true' space="preserve">\n\n耗时{{item.elapsed}}秒</text>
               </view>
           </view>
         </view>

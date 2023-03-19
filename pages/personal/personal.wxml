@@ -26,6 +26,6 @@
   </view>
 
   <view class="bottom">
-      <view>注册协议</view><view>|</view><view>隐私政策</view>
+      <!-- <view>注册协议</view><view>|</view><view>隐私政策</view>-->
   </view>
 </view>

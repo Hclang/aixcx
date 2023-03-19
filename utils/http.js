@@ -1,5 +1,5 @@
 const ui = require('./ui');
-const BASE_URL = 'https://atoptest.aciga.com.cn'
+const BASE_URL = 'https://www.hclang.cn'
 
 /**
  * 网络请求request
@@ -58,7 +58,7 @@ function request(obj) {
         fail: function(err) {
           //服务器连接异常
           console.log('===============================================================================================')
-          console.log('==    接口地址：' + url)
+          console.log('==    接口地址：' + obj.url)
           console.log('==    接口参数：' + JSON.stringify(data))
           console.log('==    请求类型：' + method)
           console.log("==    服务器连接异常")

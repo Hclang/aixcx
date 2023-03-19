@@ -11,7 +11,9 @@ Page({
       name:"VIP会员",
       image:"../../images/icons/vip.png",
       page:"vippage"
-    },{
+    }
+    
+    /* ,{
       name:"使用教程",
       image:"../../images/icons/like_fill.png",
       page:"usedpage"
@@ -19,7 +21,9 @@ Page({
       name:"客服留言",
       image:"../../images/icons/service.png",
       page:"guestpage"
-    },{
+    }*/
+    
+    ,{
       name:"关于我们",
       image:"../../images/icons/question.png",
       page:"aboutus"
@@ -79,7 +83,7 @@ Page({
   },
   aboutus(){
     wx.navigateTo({
-      url: '../vip/vip',
+      url: '../aboutus/aboutus',
     })
   }
 })

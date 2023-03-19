@@ -1,0 +1,28 @@
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.introduction-text,
+.contact-text,
+.address-text {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}

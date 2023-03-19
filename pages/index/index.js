@@ -15,25 +15,25 @@ Page({
 
   business() {
     wx.navigateTo({
-      url: '../smart/smart'
+      url: '../chat/chat'
     })
   },
 
   science() {
     wx.navigateTo({
-      url: '../smart/smart'
+      url: '../chat/chat'
     })
   },
 
   think() {
     wx.navigateTo({
-      url: '../smart/smart'
+      url: '../chat/chat'
     })
   },
 
   article() {
     wx.navigateTo({
-      url: '../smart/smart'
+      url: '../chat/chat'
     })
   }
 })

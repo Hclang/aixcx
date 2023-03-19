@@ -121,7 +121,7 @@ scroll-view{
     /* margin-left: 14rpx; */
     max-width:540rpx;
     word-wrap:break-word;
-    font-size: 32rpx;
+    font-size: 24rpx;
     font-weight: 400;
 }
 .chat-content-list.right .chat-content-list-msg{
