@@ -9,7 +9,7 @@
             <view class="time">
                 <text>{{item.createTime}}</text>
             </view>
-            <view class="content {{contentShowIndex == index?'':'contentCollect'}}" data-index="{{index}}" bindtap="toDetails">
+            <view class="content {{contentShowIndex == index?'':'contentCollect'}}" data-index="{{index}}" data-content="{{item.content}}" bindtap="toDetails">
               <text>{{item.content}}</text>
             </view>
             <view class="goodsContent">

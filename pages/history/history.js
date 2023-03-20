@@ -6,6 +6,7 @@ Page({
    */
   data: {
      contentShowIndex:-1,
+     lastClickTime: 0, //上次点击时间
       dataList:[{
         title:"祈福为主题写篇文章",
         createTime:"2023年03月15日",
@@ -103,10 +104,28 @@ Page({
 
   },
   toDetails(e) {
+      
       if (this.data.contentShowIndex == e.currentTarget.dataset.index) {
-        this.setData({contentShowIndex: -1});
+        if (this.data.lastClickTime > 0 && e.timeStamp - this.data.lastClickTime < 600) {
+            console.log("双击事件");
+            wx.setClipboardData({
+              data: e.currentTarget.dataset.content,
+              success: function(res) {
+                wx.showToast({
+                  title: '复制成功',
+                  icon: "none",
+                  mask: "true"
+                })
+              }
+            })
+        } else {
+          this.setData({contentShowIndex: -1});
+        }
       } else {
         this.setData({contentShowIndex: e.currentTarget.dataset.index});
       }
+      this.setData({
+        lastClickTime: e.timeStamp
+      });
   }
 })
