@@ -1,7 +1,7 @@
 <!--pages/history/history.wxml-->
 <view class="history_container">
     <scroll-view scroll-y > 
-      <view wx:for="{{dataList}}" data-info='{{item}}' bindtap="toDetails">
+      <view wx:for="{{dataList}}" wx:key="index" data-info='{{item}}' >
         <view class="item">
             <view class="title">
                 <text>{{item.title}}</text>
@@ -9,7 +9,7 @@
             <view class="time">
                 <text>{{item.createTime}}</text>
             </view>
-            <view class="content">
+            <view class="content {{contentShowIndex == index?'':'contentCollect'}}" data-index="{{index}}" bindtap="toDetails">
               <text>{{item.content}}</text>
             </view>
             <view class="goodsContent">

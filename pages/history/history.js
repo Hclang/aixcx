@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+     contentShowIndex:-1,
       dataList:[{
         title:"祈福为主题写篇文章",
         createTime:"2023年03月15日",
@@ -102,6 +103,10 @@ Page({
 
   },
   toDetails(e) {
-      console.log(e);
+      if (this.data.contentShowIndex == e.currentTarget.dataset.index) {
+        this.setData({contentShowIndex: -1});
+      } else {
+        this.setData({contentShowIndex: e.currentTarget.dataset.index});
+      }
   }
 })
