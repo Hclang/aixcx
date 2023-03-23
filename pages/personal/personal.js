@@ -6,14 +6,21 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
-    lists:[{
+    //canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    canIUseOpenData:false,
+    lists:[
+      {
+        name:"关于我们",
+        image:"../../images/icons/question.png",
+        page:"aboutus"
+      }
+    /* ,{
       name:"VIP会员",
       image:"../../images/icons/vip.png",
       page:"vippage"
     }
-    
-    /* ,{
+
+   ,{
       name:"使用教程",
       image:"../../images/icons/like_fill.png",
       page:"usedpage"
@@ -23,11 +30,7 @@ Page({
       page:"guestpage"
     }*/
     
-    ,{
-      name:"关于我们",
-      image:"../../images/icons/question.png",
-      page:"aboutus"
-    }]
+    ]
   },
   // 事件处理函数
   bindViewTap() {
@@ -55,6 +58,7 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        
       }
     })
   },
@@ -65,6 +69,7 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+    console.log(e.detail.userInfo)
   },
   vippage(){
     wx.navigateTo({
