@@ -91,18 +91,20 @@ Page({
           msg_type: 'text',
           type: 'right'
         };
-        
         list.push(temp);
-        
+
+        //非Stream调用方式
         let obj = {
           method: "GET",
           showLoading: true,
           url:'/ai/sendMsg',
           message:"AI思考中...",
           data:{
-            "content":content
+            "content":content,
+            "openid":getApp().globalData.openid
           }
         }
+
         httpUtils.request(obj).then(res=>{
           console.log(res)
           ui.showToast(res.data.code)
@@ -125,7 +127,8 @@ Page({
         }).catch(err=>{
           console.log(err)
         });
-
+        
+  
         that.setData({
           wxchatLists: list,
         })

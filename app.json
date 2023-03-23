@@ -31,18 +31,15 @@
         "pagePath": "pages/index/index",
         "text": "学习中心"
       },
-      {
-        "selectedIconPath": "images/comment_fill.png",
-        "iconPath": "images/comment-2.png",
-        "pagePath": "pages/history/history",
-        "text": "历史记录"
-      },
+      
       {
         "selectedIconPath": "images/people_fill.png",
         "iconPath": "images/people-2.png",
         "pagePath": "pages/personal/personal",
         "text": "个人中心"
       }
+      
     ]
   }
 }
+

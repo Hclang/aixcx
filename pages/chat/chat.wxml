@@ -5,7 +5,7 @@
         <!-- 默认展示 -->
         <view class="chat-content-list-time">{{normalDataTime}}</view>
         <view class="chat-content-list " >
-          <image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>
+          <!-- <image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>-->
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
               <view class="chat-content-list-msg"> 
                   <text selectable='true'>有什么问题快向我提问吧！我是ChatGPT智能AI助手！</text>
@@ -35,7 +35,7 @@
         <view wx:if="{{item.type == 'right'}}">
         <view class="chat-content-list-time">{{item.dataTime}}</view>
         <view class="chat-content-list right" >
-          <image class="chat-content-list-avatar "  src="{{item.userImgSrc}}"></image>
+           <!--<image class="chat-content-list-avatar "  src="{{item.userImgSrc}}"></image> -->
           <view class="chat-content-list-content " bindlongtap="delMsg" data-index="{{index}}">
               <!--  文字信息模板  ↓ hidden="{{!(item.msg_type === 'text')}}" -->
               <view class="chat-content-list-msg"  hidden="{{!(item.msg_type === 'text')}}"> 
@@ -49,7 +49,7 @@
       <view wx:if="{{item.type == 'left'}}">
         <view class="chat-content-list-time">{{normalDataTime}}</view>
         <view class="chat-content-list " >
-          <image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>
+          <!--<image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>-->
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
               <view class="chat-content-list-msg"> 
                   <text selectable='true' space="preserve">{{item.answer}}</text>
