@@ -16,7 +16,7 @@ App({
           let obj = {
             method: "GET",
             showLoading: true,
-            url:'/ai/wx/session',
+            url:'/wx/session',
             data:{
               "code":res.code
             }

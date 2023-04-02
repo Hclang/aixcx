@@ -8,7 +8,7 @@
           <!-- <image class="chat-content-list-avatar "  src="../../image/chat/voice/cloud.png"></image>-->
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
               <view class="chat-content-list-msg"> 
-                  <text selectable='true'>有什么问题快向我提问吧！我是ChatGPT智能AI助手！</text>
+                  <text selectable='true'>有什么问题快向我提问吧！我是智能AI助手！</text>
               </view>
           </view>
         </view>
@@ -21,7 +21,7 @@
           <image class="chat-content-list-avatar "  src="../../image/chat/extra/3.png"></image>
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
             <view class="chat-content-list-msg"> 
-                  <text selectable="{{ true }}" space="preserve">基于ChatGPT提供智能AI回复能力</text>
+                  <text selectable="{{ true }}" space="preserve">基于提供智能AI回复能力</text>
                   <view class='over-read-tip '></view>
               </view>
           </view>

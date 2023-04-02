@@ -13,8 +13,8 @@
               <text>{{item.content}}</text>
             </view>
             <view class="goodsContent">
-              <text>{{item.goodsNum}}人觉得很赞</text>
-              <image mode='widthFix' src="../../images/icons/appreciate_fill.png"/>
+              <!--<text>{{item.goodsNum}}人觉得很赞</text>
+             <image mode='widthFix' src="../../images/icons/appreciate_fill.png"/>-->
             </view>
         </view>
       </view>

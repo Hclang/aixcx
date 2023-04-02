@@ -36,6 +36,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   
     let _this = this;
     _this.initData();
       //获取屏幕的高度
@@ -48,6 +49,7 @@ Page({
         }
       })
     },
+
     initData: function () {
       let that = this;
       let systemInfo = wx.getSystemInfoSync();
@@ -79,6 +81,7 @@ Page({
       that.textButton();
   },
   textButton: function () {
+    const appInstance = getApp(); // 获取 App() 实例
     var that = this;
       chatInput.setTextMessageListener(function (e) {
         let content = e.detail.value;
@@ -93,15 +96,21 @@ Page({
         };
         list.push(temp);
 
+        that.setData({
+          wxchatLists: list,
+        })
+
         //非Stream调用方式
         let obj = {
           method: "GET",
           showLoading: true,
-          url:'/ai/sendMsg',
+          url:'/sendMsg/',
+          //url:'/sendMsg',（dev环境）
           message:"AI思考中...",
           data:{
             "content":content,
-            "openid":getApp().globalData.openid
+            "owner_id":appInstance.globalData.openid,
+            "source": 'wx'
           }
         }
 
@@ -129,9 +138,7 @@ Page({
         });
         
   
-        that.setData({
-          wxchatLists: list,
-        })
+      
       });
   },
   resetInputStatus: function () {

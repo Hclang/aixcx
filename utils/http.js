@@ -1,5 +1,7 @@
 const ui = require('./ui');
-const BASE_URL = 'https://www.hclang.cn'
+const BASE_URL = 'https://www.hclang.cn/ai'
+//const BASE_URL = 'http://localhost:8080'
+
 
 /**
  * 网络请求request
